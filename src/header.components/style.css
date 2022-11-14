@@ -1,0 +1,9 @@
+#stamDivInHeader{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 5s;
+    position: fixed;
+    top: 50px;
+    color: white;
+    height: 30px;
+    background-color: chartreuse;
+    margin: 0;
+}

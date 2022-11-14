@@ -1,13 +1,131 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#DivToAddTodo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #adb5bd;
+    padding: 50px;
+ }
+ 
+ .BtnAddIcon{
+    width: 40px;
+    height: 40px;
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: rgb(0, 227, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+ }
+ 
+ #addIcon{
+    font-size: 30px;
+ }
+ 
+ .theAddInp{
+    display: flex;
+    font-size: 30px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: none;
+ }
+ #theAddInp[type=text]{
+    padding-left: 15px ;
+ }
+ #theAddInp:focus{
+    outline: none;
+    
+ }
+ 
+ #theAddInp::placeholder{
+    
+    margin: 0 auto;
+ }
+ 
+ #DivToAddTodo{
+    display: flex;
+    align-items: center;
+ }
+ 
+ .divHaveAllCard{
+    margin: 30px;
+ }
+ 
+ .cardHaveInfo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #343a40;
+ }
+ 
+ #imageInCard{
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    border-radius: 10px;
+ }
+ 
+ #nameStyle{
+    color: white;
+    font-weight: 400;
+ }
+ 
+ #pencil-btn{
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    right:  16px;
+    bottom: 10px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+ }
+
+ #truch-btn{
+   font-size: 30px;
+   position: absolute;
+   bottom: 0;
+   right:  66px;
+   bottom: 10px;
+   color: white;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.editClass{
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 111;
+   background-color: #343a40;
+}
+
+.editInput{
+   padding: 30px;
+   height: 30px;
+   width: 450px;
+   font-size: 40px;
+}
+
+.closeTheEdit{
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   border: none;
+   background-color: transparent;
+   color: white;
+   font-size: 50px;
 }
