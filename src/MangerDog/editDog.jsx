@@ -9,10 +9,7 @@ function EditDog({closeCallback, performEditCallback}) {
     <div className="editClass" >
         <button className="closeTheEdit" onClick={() => closeCallback()}><i className="bi bi-x-circle"></i></button>
         <input type="text" className="editInput" onChange={handelInputChange} />
-        <button onClick={()=>{
-          
-          performEditCallback(editInp)
-          }}>add</button>
+        <button onClick={()=>{performEditCallback(editInp)}}>add</button>
     </div>
   )  
 }

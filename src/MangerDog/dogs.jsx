@@ -6,7 +6,7 @@ import EditDog from "./editDog";
 
 function Dogs() {
     const[MyArr,setMyArr]= useState([]);
-    const[editElement,setEditElement]= useState();
+    const[editElement,setEditElement]= useState(false);
     const[selectedID, setSelectedID]= useState("");
 
 
@@ -31,7 +31,7 @@ function Dogs() {
     }
 
     function closeEditElement() {
-        setEditElement(null);
+        setEditElement(false);
     }
 
     function performEditCallback(DogName) {
@@ -46,9 +46,9 @@ function Dogs() {
     }
 
     function editTheValue(id) {
+        setEditElement(true)
         setSelectedID(id);
-        console.log(id);
-        setEditElement(<EditDog closeCallback={closeEditElement} performEditCallback={performEditCallback}/>);        
+        
     }
     
     return(
@@ -56,6 +56,7 @@ function Dogs() {
             <DogsForm onSubmit={mangMyArr}/>
             <BuildDogs MyArr={MyArr} onDelete={removeItem} onEdit={editTheValue} />
             {editElement}
+           {editElement ? <EditDog closeCallback={closeEditElement} performEditCallback={performEditCallback}/>: false} 
         </>
     )
 
